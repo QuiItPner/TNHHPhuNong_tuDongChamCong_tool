@@ -1,0 +1,26 @@
+# Excel files
+*.xlsx
+*.xlsm
+*.xls
+*.xlsb
+*.xltx
+*.xltm
+*.xlt
+
+# Excel temporary files
+~$*.xlsx
+~$*.xlsm
+~$*.xls
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Test files
+test_*.py
+check_*.py
+TEST_*.xlsx
+
+# Executable files
+*.exe
