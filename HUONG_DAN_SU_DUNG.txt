@@ -55,10 +55,18 @@ LƯU Ý
 - Windows Defender có thể cảnh báo (do file exe mới)
   → Nhấn "More info" → "Run anyway"
 
+QUAN TRỌNG:
+- Tool chỉ chấm công tác khi cột B "TT Lệnh Điều Động" ≠ 0
+- Các hàng có cột B = 0 sẽ bị bỏ qua hoàn toàn
+- Đảm bảo cột B đã được điền đúng trước khi xuất file
+
 CẤU TRÚC FILE INPUT
 ───────────────────────────────────────────────────
 File "Lệnh điều động":
   Sheet "Nhap Lieu":
+    - Cột B (2): TT Lệnh Điều Động (QUAN TRỌNG!)
+      + Nếu = 0: BỎ QUA không chấm công tác
+      + Nếu ≠ 0: Chấm công tác bình thường
     - Cột R (18): Tài xế
     - Cột S (19): Công nhân
     - Cột U (21): Địa điểm công tác
@@ -98,6 +106,7 @@ LIÊN HỆ HỖ TRỢ
 Nếu gặp vấn đề, vui lòng liên hệ người quản trị hệ thống.
 
 ═══════════════════════════════════════════════════════════════
-Phiên bản: 1.0
-Ngày tạo: 22/12/2025
+Phiên bản: 1.1
+Ngày cập nhật: 06/01/2026
+Thay đổi: Thêm logic check cột B "TT Lệnh Điều Động"
 ═══════════════════════════════════════════════════════════════
