@@ -2,11 +2,11 @@
 FILE EXE: dist\ChamCongCongTac.exe
 
 TÍNH NĂNG
-✓ Tự động xử lý dữ liệu công tác từ file Lệnh điều động
-✓ Xuất dữ liệu ra sheet tháng năm
-✓ Tự động điền sheet "Chủ Nhật" cho người làm ngày Chủ Nhật
-✓ Loại bỏ số điện thoại trong tên
-✓ Giữ nguyên format template
+- Tự động xử lý dữ liệu công tác từ file Lệnh điều động
+- Xuất dữ liệu ra sheet tháng năm
+- Tự động điền sheet "Chủ Nhật" cho người làm ngày Chủ Nhật
+- Loại bỏ số điện thoại trong tên
+- Giữ nguyên format template
 
 CÁCH SỬ DỤNG
 1. Chuẩn bị file:
