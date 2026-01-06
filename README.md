@@ -1,10 +1,7 @@
         HƯỚNG DẪN SỬ DỤNG - TOOL CHẤM CÔNG CÔNG TÁC
-═══════════════════════════════════════════════════════════════
-
 FILE EXE: dist\ChamCongCongTac.exe
 
 TÍNH NĂNG
-───────────────────────────────────────────────────
 ✓ Tự động xử lý dữ liệu công tác từ file Lệnh điều động
 ✓ Xuất dữ liệu ra sheet tháng năm
 ✓ Tự động điền sheet "Chủ Nhật" cho người làm ngày Chủ Nhật
@@ -12,7 +9,6 @@ TÍNH NĂNG
 ✓ Giữ nguyên format template
 
 CÁCH SỬ DỤNG
-───────────────────────────────────────────────────
 1. Chuẩn bị file:
    - File "Lệnh điều động" (ví dụ: LenhDieuDongT11-2025.xlsx)
      + Có sheet "Nhap Lieu" chứa dữ liệu
@@ -41,13 +37,11 @@ CÁCH SỬ DỤNG
    - Sheet "chủ nhật": có danh sách người làm ngày CN
 
 YÊU CẦU HỆ THỐNG
-───────────────────────────────────────────────────
 ✓ Windows 10 SP1 trở lên (Win 10, 11)
 ✓ KHÔNG CẦN cài đặt Python
 ✓ KHÔNG CẦN cài đặt thư viện
 
 CẤU TRÚC FILE INPUT
-───────────────────────────────────────────────────
 File "Lệnh điều động":
   Sheet "Nhap Lieu":
     - Cột B (2): TT Lệnh Điều Động (QUAN TRỌNG!)
@@ -74,7 +68,6 @@ File template:
     - Row 6 trở đi: Dữ liệu
 
 TROUBLESHOOTING
-───────────────────────────────────────────────────
 Lỗi: "File mẫu không tìm thấy"
   → Đảm bảo có file "Cham cong MM YYYY.xlsx" hoặc "template.xlsx"
     trong cùng thư mục với file Lệnh điều động
@@ -86,5 +79,3 @@ Lỗi: "Không có dữ liệu"
 Windows Defender chặn:
   → Nhấn "More info" → "Run anyway"
   → Hoặc thêm exception trong Windows Defender
-
-═══════════════════════════════════════════════════════════════
