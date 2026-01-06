@@ -193,6 +193,17 @@ def collect_work_data(input_path: Path, target_month: int, target_year: int):
     result = defaultdict(lambda: {"days": set(), "notes": [], "original_name": ""})
     
     for row in ws.iter_rows(min_row=header_row + 1):
+        # Check cột B "TT Lệnh Điều Động"
+        tt_lenh_dieu_dong = row[1].value  # Cột B (index 1)
+        
+        # Nếu TT Lệnh Điều Động = 0 hoặc None, bỏ qua hàng này
+        try:
+            if tt_lenh_dieu_dong is None or float(tt_lenh_dieu_dong) == 0:
+                continue
+        except (ValueError, TypeError):
+            # Nếu không parse được thành số, coi như khác 0 (để tránh bỏ sót)
+            pass
+        
         driver = row[driver_col - 1].value
         worker = row[worker_col - 1].value
         location = row[location_col - 1].value
