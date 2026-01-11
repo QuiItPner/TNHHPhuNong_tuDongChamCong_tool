@@ -57,18 +57,6 @@
 
 ## Cấu trúc file input
 
-### File "Lệnh điều động"
-
-#### Sheet "Nhap Lieu"
-
-| Cột | Số cột | Mô tả | Ghi chú |
-|-----|--------|-------|---------|
-| **B** | 2 | TT Lệnh Điều Động | **QUAN TRỌNG!** Nếu = 0: BỎ QUA không chấm công tác<br>Nếu ≠ 0: Chấm công tác bình thường |
-| **R** | 18 | Tài xế | |
-| **S** | 19 | Công nhân | |
-| **U** | 21 | Địa điểm công tác | |
-| **W** | 23 | Thời gian công tác | |
-
 #### Format thời gian
 
 - **Ngày đơn**: `01/11/2025`
