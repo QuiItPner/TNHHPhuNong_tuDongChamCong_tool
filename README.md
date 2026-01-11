@@ -1,4 +1,4 @@
-# TOOL CHẤM CÔNG CÔNG TÁC
+# TOOL CHẤM CÔNG TÁC
 
 ## File thực thi
 `dist\ChamCongCongTac.exe`
