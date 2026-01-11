@@ -1,81 +1,102 @@
-        HƯỚNG DẪN SỬ DỤNG - TOOL CHẤM CÔNG CÔNG TÁC
-FILE EXE: dist\ChamCongCongTac.exe
+# TOOL CHẤM CÔNG CÔNG TÁC
 
-TÍNH NĂNG
-- Tự động xử lý dữ liệu công tác từ file Lệnh điều động
-- Xuất dữ liệu ra sheet tháng năm
-- Tự động điền sheet "Chủ Nhật" cho người làm ngày Chủ Nhật
-- Loại bỏ số điện thoại trong tên
-- Giữ nguyên format template
+## File thực thi
+`dist\ChamCongCongTac.exe`
 
-CÁCH SỬ DỤNG
-1. Chuẩn bị file:
-   - File "Lệnh điều động" (ví dụ: LenhDieuDongT11-2025.xlsx)
-     + Có sheet "Nhap Lieu" chứa dữ liệu
-     + Cột R: Tài xế
-     + Cột S: Công nhân
-     + Cột U: Địa điểm công tác
-     + Cột W: Thời gian công tác
-   
-   - File template (ví dụ: Cham cong 11 2025.xlsx hoặc template.xlsx)
-     + Có sheet tháng/năm (ví dụ: "11 2025")
-     + Có sheet "chủ nhật"
+---
 
-2. Chạy file exe:
-   - Double-click vào ChamCongCongTac.exe
-   - Giao diện sẽ hiện ra
+## Tính năng
 
-3. Các bước thực hiện:
-   - Click "Thêm file excel" → chọn file Lệnh điều động
-   - Tháng/năm sẽ tự động được nhận diện
-   - Click "Xuất file excel"
-   
-4. Kết quả:
-   - File kết quả: "Cham cong MM-YYYY_ket_qua.xlsx"
-   - Nằm cùng thư mục với file Lệnh điều động
-   - Sheet tháng/năm: có dữ liệu công tác
-   - Sheet "chủ nhật": có danh sách người làm ngày CN
+- Tự động xử lý dữ liệu công tác từ file **Lệnh điều động**
+- Chấm lịch công tác cho toàn bộ công nhân tài xế trong 1 tháng
+- Tự động lấy địa điểm và fill theo lịch công tác
+- Xuất dữ liệu ra sheet tháng/năm
+- Tự động điền sheet **"Chủ Nhật"** cho người làm ngày Chủ Nhật
 
-YÊU CẦU HỆ THỐNG
-✓ Windows 10 SP1 trở lên (Win 10, 11)
-✓ KHÔNG CẦN cài đặt Python
-✓ KHÔNG CẦN cài đặt thư viện
+---
 
-CẤU TRÚC FILE INPUT
-File "Lệnh điều động":
-  Sheet "Nhap Lieu":
-    - Cột B (2): TT Lệnh Điều Động (QUAN TRỌNG!)
-      + Nếu = 0: BỎ QUA không chấm công tác
-      + Nếu ≠ 0: Chấm công tác bình thường
-    - Cột R (18): Tài xế
-    - Cột S (19): Công nhân
-    - Cột U (21): Địa điểm công tác
-    - Cột W (23): Thời gian công tác
-  
-  Format thời gian:
-    - Ngày đơn: "01/11/2025"
-    - Liên tục: "03-06/11/2025" → ngày 3,4,5,6
-    - Rời rạc: "10-11-13/12/2025" → ngày 10,11,13
+## Cách sử dụng
 
-File template:
-  Sheet tháng/năm (ví dụ "11 2025"):
-    - Header row chứa "Họ và tên"
-    - Cột ngày bắt đầu từ cột D
-    - Có cột "Ghi chú công tác"
-  
-  Sheet "chủ nhật":
-    - Row 5: Header (Họ và tên, Chức vụ, số ngày, các ngày CN, ghi chú)
-    - Row 6 trở đi: Dữ liệu
+### 1. Chuẩn bị file
 
-TROUBLESHOOTING
-Lỗi: "File mẫu không tìm thấy"
-  → Đảm bảo có file "Cham cong MM YYYY.xlsx" hoặc "template.xlsx"
-    trong cùng thư mục với file Lệnh điều động
+#### File "Lệnh điều động" (ví dụ: `LenhDieuDongT11-2025.xlsx`)
+- Có sheet **"Nhap Lieu"** chứa dữ liệu
+- **Cột R**: Tài xế
+- **Cột S**: Công nhân
+- **Cột U**: Địa điểm công tác
+- **Cột W**: Thời gian công tác
 
-Lỗi: "Không có dữ liệu"
-  → Kiểm tra sheet "Nhap Lieu" có đúng format không
-  → Kiểm tra tháng/năm đã chọn đúng chưa
+#### File template (ví dụ: `Cham cong 11 2025.xlsx` hoặc `template.xlsx`)
+- Có sheet tháng/năm (ví dụ: **"11 2025"**)
+- Có sheet **"chủ nhật"**
 
-Windows Defender chặn:
-  → Nhấn "More info" → "Run anyway"
-  → Hoặc thêm exception trong Windows Defender
+### 2. Chạy file exe
+- Double-click vào `ChamCongCongTac.exe`
+- Giao diện sẽ hiện ra
+
+### 3. Các bước thực hiện
+1. Click **"Thêm file excel"** → chọn file Lệnh điều động
+2. Tháng/năm sẽ tự động được nhận diện
+3. Click **"Xuất file excel"**
+
+### 4. Kết quả
+- **File kết quả**: `Cham cong MM-YYYY_ket_qua.xlsx`
+- Nằm cùng thư mục với file Lệnh điều động
+- **Sheet tháng/năm**: có dữ liệu công tác
+- **Sheet "chủ nhật"**: có danh sách người làm ngày CN
+
+---
+
+## Yêu cầu hệ thống
+
+- Windows 10 SP1 trở lên (Win 10, 11)
+- **KHÔNG CẦN** cài đặt Python
+- **KHÔNG CẦN** cài đặt thư viện
+
+---
+
+## Cấu trúc file input
+
+### File "Lệnh điều động"
+
+#### Sheet "Nhap Lieu"
+
+| Cột | Số cột | Mô tả | Ghi chú |
+|-----|--------|-------|---------|
+| **B** | 2 | TT Lệnh Điều Động | **QUAN TRỌNG!** Nếu = 0: BỎ QUA không chấm công tác<br>Nếu ≠ 0: Chấm công tác bình thường |
+| **R** | 18 | Tài xế | |
+| **S** | 19 | Công nhân | |
+| **U** | 21 | Địa điểm công tác | |
+| **W** | 23 | Thời gian công tác | |
+
+#### Format thời gian
+
+- **Ngày đơn**: `01/11/2025`
+- **Liên tục**: `03-06/11/2025` → ngày 3, 4, 5, 6
+- **Rời rạc**: `10-11-13/12/2025` → ngày 10, 11, 13
+
+### File template
+
+#### Sheet tháng/năm (ví dụ: "11 2025")
+- Header row chứa **"Họ và tên"**
+- Cột ngày bắt đầu từ **cột D**
+- Có cột **"Ghi chú công tác"**
+
+#### Sheet "chủ nhật"
+- **Row 5**: Header (Họ và tên, Chức vụ, số ngày, các ngày CN, ghi chú)
+- **Row 6 trở đi**: Dữ liệu
+
+---
+
+## Xử lý sự cố
+
+### Lỗi: "File mẫu không tìm thấy"
+> Đảm bảo có file `Cham cong MM YYYY.xlsx` hoặc `template.xlsx` trong cùng thư mục với file Lệnh điều động
+
+### Lỗi: "Không có dữ liệu"
+- Kiểm tra sheet **"Nhap Lieu"** có đúng format không
+- Kiểm tra tháng/năm đã chọn đúng chưa
+
+### Windows Defender chặn
+- Nhấn **"More info"** → **"Run anyway"**
+- Hoặc thêm exception trong Windows Defender
